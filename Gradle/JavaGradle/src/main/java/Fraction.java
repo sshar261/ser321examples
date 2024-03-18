@@ -72,7 +72,7 @@ public class Fraction {
 
          // print it
          System.out.print("The fraction is: ");
-         frac.print()
+         frac.print();
          System.out.println("");
 
       }catch(Exception e) {
