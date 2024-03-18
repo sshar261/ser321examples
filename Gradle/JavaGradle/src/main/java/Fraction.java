@@ -51,14 +51,17 @@ public class Fraction {
       try {
          // create a new instance
          // Fraction *frac = [[Fraction alloc] init];
-         if(args.length == 0) {
-         Fraction frac = new Fraction(num,den);
+         if(args.length == 2) {
+         Fraction frac = new Fraction();
+         frac.setNumerator(Integer.parseInt(args[0]));
+         frac.setDenominator(Integer.parseInt(args[1]));
+         } else {
+
+         Fraction frac = new Fraction();
+         
          frac.setNumerator(1);
          frac.setDenominator(3);
-         } else {
-         int num = Integer.parseInt(args[0]);
-         int den = Integer.parseInt(args[1]);
-         Fraction frac = new Fraction(num, den);
+         
          }
 
          
