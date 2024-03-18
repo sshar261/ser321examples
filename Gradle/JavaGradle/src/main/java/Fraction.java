@@ -51,24 +51,28 @@ public class Fraction {
       try {
          // create a new instance
          // Fraction *frac = [[Fraction alloc] init];
-         if(args.length == 2) {
-         Fraction frac = new Fraction();
-         frac.setNumerator(Integer.parseInt(args[0]));
-         frac.setDenominator(Integer.parseInt(args[1]));
-         } else {
 
+         
          Fraction frac = new Fraction();
          
          frac.setNumerator(1);
          frac.setDenominator(3);
          
+         if(args.length == 2) {
+         
+         frac.setNumerator(Integer.parseInt(args[0]));
+         frac.setDenominator(Integer.parseInt(args[1]));
+         
          }
+
+         
+        
 
          
 
          // print it
          System.out.print("The fraction is: ");
-         System.out.print(numerator + "/" + denominator );
+         frac.print()
          System.out.println("");
 
       }catch(Exception e) {
