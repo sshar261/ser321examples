@@ -68,7 +68,7 @@ public class Fraction {
 
          // print it
          System.out.print("The fraction is: ");
-         frac.print();
+         System.out.print(numerator + "/" + denominator );
          System.out.println("");
 
       }catch(Exception e) {
