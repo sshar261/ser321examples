@@ -54,6 +54,17 @@ task runFraction(type: JavaExec) {
 
   main = 'Fraction'
 
+
+}
+
+task runFrac(type: JavaExec) {
+  group 'Fraction Tasks'
+  description 'Tasks which run Fraction with default parameters or given value'
+  
+  classpath = sourceSets.main.runtimeClasspath
+  
+  main = 'Fraction'
+  
   if (project.hasProperty("num1") && project.hasProperty("num2")) {
     args(project.getProperty('num1'), project.getProperty('num2'));
   } else if (project.hasProperty("num1")){
@@ -63,15 +74,6 @@ task runFraction(type: JavaExec) {
   } else {
     args(1,3);
   }
-}
-
-task runFrac(type: JavaExec) {|
-  group 'Fraction Tasks'
-  description 'Tasks which run Fraction with default parameters or given value'
-  
-  classpath = sourceSets.main.runtimeClasspath
-  
-  main = 'Fraction'
 }
 
 // Try:
