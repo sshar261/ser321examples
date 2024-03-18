@@ -13,7 +13,17 @@ public class Fraction {
 
    private int numerator, denominator;
 
-   public Fraction(){
+   public Fraction(int numerator, int denominator) {
+      this.numerator = numerator;
+      if(denominator !=0) {
+         this.denominator = denominator;
+      } else {
+         System.out.println("Denominator can not be 0");
+         System.exit(0);
+      }
+   }
+
+   public Fraction() {
       numerator = denominator = 0;
    }
 
@@ -41,11 +51,17 @@ public class Fraction {
       try {
          // create a new instance
          // Fraction *frac = [[Fraction alloc] init];
-         Fraction frac = new Fraction();
-
-         // set the values
+         if(args.length == 0) {
+         Fraction frac = new Fraction(num,den);
          frac.setNumerator(1);
          frac.setDenominator(3);
+         } else {
+         int num = Integer.parseInt(args[0]);
+         int den = Integer.parseInt(args[1]);
+         Fraction frac = new Fraction(num, den);
+         }
+
+         
 
          // print it
          System.out.print("The fraction is: ");
